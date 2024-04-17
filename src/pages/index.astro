@@ -80,7 +80,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</div>
 		</section>
 
-		<Section title='About'>
+		<Section title='Presentación'>
 			<p class='text-muted-foreground'>
 				¡Hola! 👋, soy Rubén, un programador web con experiencia sólida. Apasionado por la
 				Inteligencia Artificial y el Big Data, disfruto trabajar en equipo, aprender y enseñar.
@@ -89,7 +89,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</p>
 		</Section>
 
-		<Section title='Experience'>
+		<Section title='Experiencia'>
 			<Card
 				heading='Web Frontend Developer - React'
 				subheading='NTT Data - CaixaBank'
@@ -105,56 +105,55 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</Card>
 		</Section>
 
-		<Section title='Education'>
+		<Section title='Educación'>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
+				heading='Master de FP en Inteligencia Artificial y Big Data'
+				subheading='IES La Mar | Jávea'
+				date='Sep 2023 - Jul 2024 (9 meses)'
 				imagePath='/src/assets/about-astro.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
-			>
-				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-						molestiae laboriosam pariatur!
-
-						<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-					</li>
-				</ul>
-			</Card>
+			/>
 			<Card
-				heading='Lorem Ipsum'
-				subheading='Sit amet consectetur'
-				date='Dec 2022 - Nov 2023'
+				heading='Desarrollo de Aplicaciones Web'
+				subheading='IES Enric Valor | Pego'
+				date='Sep 2020 - Jul 2022 (1 año y 9 meses)'
+				imagePath='/src/assets/about-astro.png'
+				altText='Lorem, ipsum dolor sit'
+				imageClass='h-12 w-auto md:-left-16'
+			/>
+			<Card
+				heading='Sistemas Microinformáticos y Redes'
+				subheading='IES Historiador Chabas | Denia'
+				date='Sep 2018 - jun 2020 (1 año y 9 meses)'
 				imagePath='/src/assets/about-astro.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
 			/>
 		</Section>
 
-		<Section title='Projects'>
+		<Section title='Proyectos'>
 			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
 				<ProjectCard
 					href='https://aiarosa.com'
 					heading='AIArosa'
 					subheading='Web construída con Next.js para la venta de soluciones de inteligencia artificial.'
 					imagePath='/src/assets/AIArosa_landing_page.jpg'
-					altText='Example'
+					altText='Landin page del proyecto AIArosa'
 					class='w-full sm:w-1/2'
 				/>
 				<ProjectCard
-					as='div'
+					href='https://rubenromera.com'
 					heading='rubenromera.com'
 					subheading='Web construída con Astro y React para la creación de un portafolio.'
 					imagePath='/src/assets/Portfolio_landing_page.jpg'
-					altText='Lorem, ipsum dolor sit'
+					altText='Landin page del portfolio rubenromera.com'
 					class='w-full sm:w-1/2'
 				/>
 			</div>
 		</Section>
 
-		<Section title='Certifications'>
+		<Section title='Certificados'>
 			<Card
 				as='a'
 				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
@@ -177,13 +176,26 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 		</Section>
 
-		<Section title='Skills'>
+		<Section title='Habilidades'>
 			<SkillLayout title='Languages' skills={languages} />
 			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
 			<SkillLayout title='Others' skills={others} />
 		</Section>
 	</div>
+	<a
+		href='mailto:romera02rrs@gmail.com'
+		class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
+	>
+		<span class='relative flex items-center justify-center'>
+			<span
+				class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
+			></span>
+			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
+		</span>
+
+		<p class='font-medium'>Contactar</p>
+	</a>
 	<a
 		href='https://github.com/srleom/astro-theme-resume.git'
 		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
