@@ -12,10 +12,50 @@ import astro from '../assets/about-astro.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = ['Inglés - Intermedio', 'Castellano - Nativo', 'Valenciano - Nativo']
+const frontend = [
+	'Javascript',
+	'Typescript',
+	'React',
+	'React Native',
+	'Next.js',
+	'Angular',
+	'Vue',
+	'Astro',
+	'Tailwind',
+	'Bootstrap',
+	'CSS',
+	'HTML',
+	'XML'
+]
+const backend = ['PHP', 'Symfony', 'Java', 'Node', 'Express', 'SQL', 'MongoDB']
+const IABigData = [
+	'Python',
+	'Scikit-learn',
+	'Pytorch',
+	'Tensorflow',
+	'Power BI',
+	'Tableau',
+	'Hadoop',
+	'Spark'
+]
+const otros = [
+	'Git',
+	'Github',
+	'Gitlab',
+	'Administración de Sistemas Linux (CLI)',
+	'Figma',
+	'Jira',
+	'Miro',
+	'Notion',
+	'Drive',
+	'Excel',
+	'Word',
+	'Gimp',
+	'Chat GPT',
+	'Midjourney',
+	'Dal·le'
+]
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -60,7 +100,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 						>
 					</Label>
 					<Label
-						title='Perfil de linkedIn'
+						title='LinkedIn'
 						as='a'
 						href='https://www.linkedin.com/in/rub%C3%A9n-romera-s%C3%A1nchez-a8798a1b0/'
 						target='_blank'
@@ -76,14 +116,27 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
+					<Label title='GitHub' as='a' href='https://github.com/romera02rrs' target='_blank'>
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							viewBox='0 0 24 24'
+							slot='icon'
+							class='h-6 w-6 text-foreground/75'
+						>
+							<path
+								fill='currentColor'
+								d='M12 0C5.37 0 0 5.37 0 12c0 5.303 3.438 9.8 8.207 11.385c.6.11.793-.26.793-.577c0-.285-.01-1.037-.015-2.03c-3.338.724-4.042-1.61-4.042-1.61c-.546-1.387-1.333-1.755-1.333-1.755c-1.09-.745.083-.73.083-.73c1.205.086 1.838 1.236 1.838 1.236c1.07 1.834 2.805 1.305 3.49.998c.108-.776.418-1.305.762-1.605c-2.665-.298-5.466-1.332-5.466-5.93c0-1.314.465-2.38 1.236-3.22c-.124-.3-.54-1.523.12-3.176c0 0 1.01-.322 3.3 1.23c.96-.266 1.98-.397 3-.402c1.02.005 2.04.136 3 .402c2.29-1.552 3.297-1.23 3.297-1.23c.66 1.653.245 2.876.12 3.176c.765.84 1.236 1.906 1.236 3.22c0 4.61-2.805 5.627-5.476 5.92c.42.367.795 1.095.795 2.206c0 1.592-.015 2.876-.015 3.27c0 .313.188.688.8.573C20.565 21.793 24 17.296 24 12C24 5.37 18.627 0 12 0z'
+							></path>
+						</svg>
+					</Label>
 				</div>
 			</div>
 		</section>
 
 		<Section title='Presentación'>
 			<p class='text-muted-foreground'>
-				¡Hola! 👋, soy Rubén, un programador web con experiencia sólida. Apasionado por la
-				Inteligencia Artificial y el Big Data, disfruto trabajar en equipo, aprender y enseñar.
+				¡Hola! 👋, soy Rubén, un programador web con experiencia sólida. Formado en
+				Inteligencia Artificial y en Big Data, disfruto trabajar en equipo, aprender y enseñar.
 				Siempre busco oportunidades para crecer y contribuir al éxito de los proyectos en los que
 				participo.
 			</p>
@@ -93,7 +146,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<Card
 				heading='Web Frontend Developer - React'
 				subheading='NTT Data - CaixaBank'
-				date='Sep 2022 - Actualidad'
+				date='Sep 2022 - Actualidad (1 año y 8 meses)'
 				imagePath='/src/assets/about-astro.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
@@ -153,7 +206,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</div>
 		</Section>
 
-		<Section title='Certificados'>
+		<!-- <Section title='Certificados'>
 			<Card
 				as='a'
 				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
@@ -174,18 +227,19 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://www.google.com'
 			/>
-		</Section>
+		</Section> -->
 
 		<Section title='Habilidades'>
-			<SkillLayout title='Languages' skills={languages} />
+			<SkillLayout title='Idiomas' skills={languages} />
 			<SkillLayout title='Frontend' skills={frontend} />
 			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+			<SkillLayout title='IA y Big Data' skills={IABigData} />
+			<SkillLayout title='Otros' skills={otros} />
 		</Section>
 	</div>
 	<a
 		href='mailto:romera02rrs@gmail.com'
-		class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
+		class='mt-10 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 	>
 		<span class='relative flex items-center justify-center'>
 			<span
@@ -195,18 +249,5 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</span>
 
 		<p class='font-medium'>Contactar</p>
-	</a>
-	<a
-		href='https://github.com/srleom/astro-theme-resume.git'
-		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
-	>
-		<span class='relative flex items-center justify-center'>
-			<span
-				class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-			></span>
-			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
-		</span>
-
-		<p class='font-medium'>Get free template</p>
 	</a>
 </PageLayout>
