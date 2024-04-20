@@ -68,7 +68,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<Image src={astro} alt='profile photo' class='h-40 w-auto p-2' loading='eager' />
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl text-center font-bold'>Rubén Romera Sánchez</h1>
+				<h1 class='text-center text-3xl font-bold'>Rubén Romera Sánchez</h1>
 				<a
 					href='mailto:romera02rrs@gmail.com'
 					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
@@ -135,10 +135,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='Presentación'>
 			<p class='text-muted-foreground'>
-				¡Hola! 👋, soy Rubén, un programador web con experiencia sólida. Formado en
-				Inteligencia Artificial y en Big Data, disfruto trabajar en equipo, aprender y enseñar.
-				Siempre busco oportunidades para crecer y contribuir al éxito de los proyectos en los que
-				participo.
+				¡Hola! 👋, soy Rubén, un programador web con experiencia sólida. Formado en Inteligencia
+				Artificial y en Big Data, disfruto trabajar en equipo, aprender y enseñar. Siempre busco
+				oportunidades para crecer y contribuir al éxito de los proyectos en los que participo.
 			</p>
 		</Section>
 
@@ -186,23 +185,34 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</Section>
 
 		<Section title='Proyectos'>
-			<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
+			<div class='grid grid-cols-2 gap-3'>
 				<ProjectCard
 					href='https://aiarosa.com'
 					heading='AIArosa'
 					subheading='Web construída con Next.js para la venta de soluciones de inteligencia artificial.'
 					imagePath='/src/assets/AIArosa_landing_page.jpg'
-					altText='Landin page del proyecto AIArosa'
-					class='w-full sm:w-1/2'
+					altText='Landing page del proyecto AIArosa'
 				/>
 				<ProjectCard
 					href='https://rubenromera.com'
 					heading='rubenromera.com'
 					subheading='Web construída con Astro y React para la creación de un portafolio.'
 					imagePath='/src/assets/Portfolio_landing_page.jpg'
-					altText='Landin page del portfolio rubenromera.com'
-					class='w-full sm:w-1/2'
+					altText='Landing page del portfolio rubenromera.com'
 				/>
+				<ProjectCard
+					href='https://flipperpool.com'
+					heading='Flipperpool'
+					subheading='Web construída con Vue para una empresa de construcción.'
+					imagePath='/src/assets/Flipperpool_landing_page.jpg'
+					altText='Landing page del portfolio rubenromera.com'
+				/>
+				<ProjectCard
+				heading='Próximamente...'
+				subheading='Web dedicada a los algoritmos de aprendizaje atutomático.'
+				imagePath='/src/assets/coming-soon.png'
+				altText='Landing page del portfolio rubenromera.com'
+			/>
 			</div>
 		</Section>
 
