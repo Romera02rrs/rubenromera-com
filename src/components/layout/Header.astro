@@ -7,7 +7,11 @@
 		class='relative mx-auto flex w-full items-center justify-between sm:flex sm:items-center'
 		aria-label='global'
 	>
-		<a class='flex-none text-xl font-semibold' href='/' aria-label='Brand'>rubenromera.com</a>
+		<a
+			class='flex-none text-xl font-semibold transition-all hover:opacity-75'
+			href='/'
+			aria-label='Brand'>rubenromera.com</a
+		>
 
 		<div class='flex flex-row items-center justify-center gap-x-5 sm:gap-x-7'>
 			<!-- <a
@@ -24,8 +28,7 @@
 			</a> -->
 
 			<button
-				id='toggleDarkMode'
-				class='relative rounded-md border border-border p-1.5 transition-all hover:bg-border'
+				class='toggleDarkMode relative rounded-md border border-border p-1.5 transition-all hover:bg-border'
 			>
 				<span class='sr-only'>Dark Theme</span>
 				<svg
@@ -59,12 +62,14 @@
 	function getCurrentTheme() {
 		return localStorage.getItem('theme')
 	}
-	const toggleDarkModeButton = document.getElementById('toggleDarkMode')
+	const toggleDarkModeButtons = document.getElementsByClassName('toggleDarkMode')
 
-	toggleDarkModeButton?.addEventListener('click', () => {
-		const toggleDarkModeEvent = new CustomEvent('theme-change', {
-			detail: { theme: getCurrentTheme() === 'light' ? 'dark' : 'light' }
+	for (const button of toggleDarkModeButtons) {
+		button.addEventListener('click', () => {
+			const toggleDarkModeEvent = new CustomEvent('theme-change', {
+				detail: { theme: getCurrentTheme() === 'light' ? 'dark' : 'light' }
+			})
+			document.dispatchEvent(toggleDarkModeEvent)
 		})
-		document.dispatchEvent(toggleDarkModeEvent)
-	})
+	}
 </script>
