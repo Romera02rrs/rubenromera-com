@@ -51,6 +51,11 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 <meta content={description} name='description' />
 <meta content={siteConfig.author} name='author' />
 
+{/* SEO */}
+<meta name="keywords" content={siteConfig.keywords}>
+<meta name="robots" content="index, follow">
+
+
 {/* Theme Colour */}
 <meta content='' name='theme-color' />
 
@@ -87,3 +92,9 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 <link href='/rss.xml' rel='alternate' title={siteConfig.title} type='application/rss+xml' />
 
 <meta content={Astro.generator} name='generator' />
+
+{/* Metaetiquetas adicionales */}
+<meta name="language" content="es" />
+<meta name="geo.region" content="ES-A" />
+<meta name="geo.placename" content="Denia" />
+<meta name="geo.position" content="38.83905606783511;0.10872204913167001" />

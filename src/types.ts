@@ -7,7 +7,8 @@ export type SiteConfig = {
 	date: {
 		locale: string | string[] | undefined
 		options: Intl.DateTimeFormatOptions
-	}
+	},
+	keywords?: string | undefined 
 }
 
 export type PaginationLink = {

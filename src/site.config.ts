@@ -3,11 +3,12 @@ import type { AstroExpressiveCodeOptions } from 'astro-expressive-code'
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: 'Romera02rrs',
+	author: 'Rubén Romera Sánchez',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
 	title: 'rubenromera.com',
 	// Meta property used as the default description meta property
-	description: 'El perfil de Rubén Romera',
+	description:
+		'Descubre mi currículum online, donde podrás ver todos mis proyectos, habilidades, aptitudes, conocimientos, estudios y mucho más, también podrás contactar conmigo desde la web, te espero en rubenromera.com',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'es',
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -20,7 +21,9 @@ export const siteConfig: SiteConfig = {
 			month: 'short',
 			year: 'numeric'
 		}
-	}
+	},
+	keywords:
+		'rubenromera, ruben romera, Ruben Romera Sanchez, Rubén Romera Sánchez, Rubén Romera CV, Rubén Romera currículum, Rubén Romera portfolio, Rubén Romera portafolio, programador web, desarrollador web, experto en IA, inteligencia artificial, big data, analista de datos, frontend developer, backend developer, desarrollador React, desarrollador Next.js, desarrollador Vue, proyectos IA, Rubén Romera GitHub, Rubén Romera LinkedIn, Rubén Romera X, Rubén Romera Twitter, Rubén Romera Instagram'
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [
