@@ -5,92 +5,10 @@ import Card from '../components/Card.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Label from '../components/Label.astro'
 import SkillLayout from '../components/SkillLayout.astro'
-import PostPreview from '@/components/blog/PostPreview.astro'
-
+import Button from '@/components/Button.astro'
+import { skills } from '../utils/skills.ts'
 import { Image } from 'astro:assets'
 import astro from '../assets/about-astro.png'
-
-import { getAllPosts, sortMDByDate } from '@/utils'
-
-export const skills = {
-  languages: [
-    { name: 'Castellano - Nativo', gold: false },
-    { name: 'Valenciano - Nativo', gold: false },
-    { name: 'Inglés - Intermedio', gold: false },
-  ],
-	frontend: [
-    { name: 'HTML', gold: true },
-    { name: 'CSS', gold: true },
-    { name: 'Javascript', gold: true },
-    { name: 'Typescript', gold: true },
-    { name: 'React', gold: true },
-    { name: 'Next.js', gold: true },
-    { name: 'React Native', gold: false },
-    { name: 'Tailwind', gold: true },
-    { name: 'Bootstrap', gold: true },
-    { name: 'Angular', gold: false },
-    { name: 'Vue', gold: false },
-    { name: 'Astro', gold: false },
-    { name: 'SEO', gold: false },
-    { name: 'XML', gold: true },
-  ],
-  backend: [
-    { name: 'Node', gold: true },
-    { name: 'Express', gold: true },
-    { name: 'Python', gold: true },
-    { name: 'FastAPI', gold: false },
-    { name: 'PHP', gold: true },
-    { name: 'Symfony', gold: false },
-    { name: 'Java', gold: false },
-    { name: 'SQL', gold: true },
-    { name: 'MongoDB', gold: true },
-    { name: 'Docker', gold: true },
-    { name: 'REST APIs', gold: true },
-    { name: 'OpenAI API', gold: true },
-    { name: 'Third-party integrations', gold: true },
-  ],
-  data_ai_ml: [
-    { name: 'Python', gold: true },
-    { name: 'Scikit-learn', gold: true },
-    { name: 'LangChain', gold: false },
-    { name: 'Splunk', gold: true },
-    { name: 'OpenSearch', gold: false },
-    { name: 'Pytorch', gold: false },
-    { name: 'Tensorflow', gold: false },
-    { name: 'Google Cloud Vertex AI', gold: true },
-    { name: 'Google Cloud BigQuery', gold: true },
-    { name: 'Hadoop', gold: false },
-    { name: 'Spark', gold: false },
-    { name: 'Power BI', gold: false },
-    { name: 'Tableau', gold: false },
-  ],
-  devops_cloud: [
-    { name: 'Docker', gold: true },
-    { name: 'Administración de Sistemas Linux (CLI)', gold: true },
-    { name: 'Git', gold: true },
-    { name: 'Github', gold: true },
-    { name: 'Gitlab', gold: true },
-  ],
-  others: [
-    { name: 'Microsoft 365', gold: true },
-    { name: 'Google Workspace', gold: true },
-    { name: 'Drive', gold: true },
-    { name: 'Notion', gold: false },
-    { name: 'Miro', gold: false },
-    { name: 'Jira', gold: false },
-    { name: 'Figma', gold: false },
-    { name: 'Markdown', gold: true },
-    { name: 'Scrum', gold: true },
-		{ name: 'Chat GPT', gold: false },
-    { name: 'Midjourney', gold: false },
-    { name: 'Gimp', gold: false }
-  ]
-};
-
-
-const MAX_POSTS = 10
-const allPosts = await getAllPosts()
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 ---
 
 <PageLayout meta={{ title: 'Home' }}>
@@ -164,12 +82,37 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</div>
 		</section>
 
-		<Section title='Presentación'>
-			<p class='text-muted-foreground'>
-				¡Hola! 👋, soy Rubén, un programador web con experiencia sólida. Formado en Inteligencia
-				Artificial y en Big Data, disfruto trabajar en equipo, aprender y enseñar. Siempre busco
-				oportunidades para crecer y contribuir al éxito de los proyectos en los que participo.
-			</p>
+		<Section title='Presentación' class='flex'>
+			<div class='flex flex-col gap-y-4'>
+				<p class='text-muted-foreground'>
+					¡Hola! 👋, soy Rubén, un programador web con experiencia sólida. Formado en Inteligencia
+					Artificial y en Big Data, disfruto trabajar en equipo, aprender y enseñar. Siempre busco
+					oportunidades para crecer y contribuir al éxito de los proyectos en los que participo.
+
+					<span id='extraText' style='display: none;'>
+						Trabajé en el desarrollo FrontEnd de grandes empresas como Caixabank, alcanzando el 100%
+						de los objetivos establecidos en los plazos acordados. Desarrollé modelos de Machine
+						Learning para importantes compañías eléctricas como Totemtowers y Orange prediciendo
+						consumos y posibles fallos operativos. Especializado en Splunk, implementé sistemas de
+						monitorización de logs y análisis en tiempo real que redujeron en un 45% el tiempo de
+						respuesta ante incidencias críticas en empresas como Inditex y Bip&Drive.
+					</span>
+				</p>
+				<div>
+					<button
+						id='btn-saber-mas'
+						class='text-gold bg-gold inline-flex cursor-pointer items-center gap-x-1 rounded-lg border border-border px-2 py-1 text-sm transition-all hover:bg-input'
+					>
+						Saber más
+					</button>
+					<button
+						id='btn-saber-menos'
+						class='text-gold bg-gold hidden cursor-pointer items-center gap-x-1 rounded-lg border border-border px-2 py-1 text-sm transition-all hover:bg-input'
+					>
+						Cerrar
+					</button>
+				</div>
+			</div>
 		</Section>
 
 		<Section title='Experiencia'>
@@ -182,9 +125,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Análisis de datos y monitorización de logs con Splunk.</li>
-					<li>Desarrollo de modelos de machine learning con Python y Google Cloud.</li>
-					<li>Desarrollo web Full Stack.</li>
+					<li>
+						Análisis de datos y monitorización de logs con <strong>Splunk</strong> para <strong
+							>Inditex</strong
+						> y <strong>Bip&Drive</strong>.
+					</li>
+					<li>
+						Desarrollo de modelos de <strong>machine learning</strong> con Python y Google Cloud para
+						<strong>Totemtower</strong> y <strong>Orange</strong>.
+					</li>
+					<li>Desarrollo web <strong>Full Stack</strong> para herramientas internas.</li>
 				</ul>
 			</Card>
 			<Card
@@ -196,8 +146,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Desarrollo del frontend con React para el proyecto Caixabank.</li>
-					<li>Desarrollo del frontend con React Native para el proyecto Pepephone.</li>
+					<li>
+						Desarrollo del frontend con <strong>React</strong> para el proyecto <strong
+							>Caixabank</strong
+						>.
+					</li>
+					<li>
+						Desarrollo del frontend con <strong>React Native</strong> para el proyecto <strong
+							>Pepephone</strong
+						>.
+					</li>
 				</ul>
 			</Card>
 		</Section>
@@ -241,7 +199,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 				<ProjectCard
 					href='https://rubenromera.com'
 					heading='rubenromera.com'
-					subheading='Web construída con Astro y React para la creación de un portafolio.'
+					subheading='Web construída con Astro para la creación de un portafolio.'
 					imagePath='/src/assets/Portfolio_landing_page.jpg'
 					altText='Landing page del portfolio rubenromera.com'
 				/>
@@ -261,28 +219,38 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			</div>
 		</Section>
 
-		<!-- <Section title='Certificados'>
+		<Section title='Certificados'>
 			<Card
 				as='a'
-				heading='Lorem ipsum, dolor sit amet consectetur adipisicing.'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta magni consequuntur corrupti.'
-				date='Mar 2024 - Mar 2024'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				heading='Prepare Data for ML APIs on Google Cloud'
+				subheading=''
+				date='Oct 18 2024'
+				imagePath='/src/assets/google_cloud_logo.png'
+				altText='Prepare Data for ML APIs on Google Cloud Certificate'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
+				href='https://www.cloudskillsboost.google/public_profiles/2298d318-b525-4469-ab63-ef4f55406230/badges/12183352?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share'
 			/>
 			<Card
 				as='a'
-				heading='Lorem ipsum, dolor sit amet'
-				subheading='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta.'
-				date='Mar 2029 - Mar 2032'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
+				heading='GDPR Compliance: Essential Training'
+				subheading=''
+				date='Gen 17 2025'
+				imagePath='/src/assets/linkedin_badge_logo.png'
+				altText='GDPR Compliance: Essential Training Certificate'
 				imageClass='h-11 w-auto md:-left-16'
-				href='https://www.google.com'
+				href='https://lnkd.in/dujUvAVC'
 			/>
-		</Section> -->
+			<Card
+				as='a'
+				heading='Docker - Guía práctica de uso para desarrolladores'
+				subheading='El certificado tiene otro nombre debido al uso de una cuenta de empresa compartida.'
+				date='Nov 27 2024'
+				imagePath='/src/assets/udemy_logo.png'
+				altText='Prepare Data for ML APIs on Google Cloud Certificate'
+				imageClass='h-11 w-auto md:-left-16'
+				href='https://nttdatalearn.udemy.com/certificate/UC-bfe3e243-e92f-4c75-b5e4-a747c6afa207/'
+			/>
+		</Section>
 
 		<Section title='Habilidades'>
 			<SkillLayout title='Idiomas' skills={skills.languages} />
@@ -307,3 +275,46 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		<p class='font-medium'>contacto@rubenromera.com</p>
 	</a>
 </PageLayout>
+
+<script>
+	const extraText = document.getElementById('extraText')
+	const btnmas = document.getElementById('btn-saber-mas')
+	const btnmenos = document.getElementById('btn-saber-menos')
+
+	if (extraText) {
+		if (btnmas && btnmenos) {
+			document.addEventListener('DOMContentLoaded', function () {
+				btnmas.addEventListener('click', function () {
+					extraText.style.display = 'inline'
+					btnmas.style.display = 'none'
+					btnmenos.style.display = 'inline'
+				})
+			})
+
+			document.addEventListener('DOMContentLoaded', function () {
+				btnmenos.addEventListener('click', function () {
+					extraText.style.display = 'none'
+					btnmenos.style.display = 'none'
+					btnmas.style.display = 'inline'
+				})
+			})
+		}
+	}
+</script>
+
+<style>
+	.bg-gold {
+		background-image: linear-gradient(135deg, #f6d72a, #ffa000);
+		color: #3e2c00;
+		font-weight: 600;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+		transition:
+			background-image 0.3s ease,
+			transform 0.2s ease;
+	}
+
+	.bg-gold:hover {
+		background-image: linear-gradient(135deg, #fbcd36, #ff8f00);
+		transform: translateY(-3px);
+	}
+</style>
