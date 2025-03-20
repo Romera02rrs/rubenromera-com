@@ -12,52 +12,81 @@ import astro from '../assets/about-astro.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['Inglés - Intermedio', 'Castellano - Nativo', 'Valenciano - Nativo']
-const frontend = [
-	'Javascript',
-	'Typescript',
-	'React',
-	'React Native',
-	'Next.js',
-	'Angular',
-	'Vue',
-	'Astro',
-	'Tailwind',
-	'Bootstrap',
-	'CSS',
-	'HTML',
-	'XML'
-]
-const backend = ['PHP', 'Python', 'Docker', 'Symfony', 'Java', 'Node', 'Express', 'SQL', 'MongoDB']
-const IABigData = [
-	'Python',
-	'Splunk',
-	'OpenSearch',
-	'Scikit-learn',
-	'Pytorch',
-	'Tensorflow',
-	'Power BI',
-	'Tableau',
-	'Hadoop',
-	'Spark'
-]
-const otros = [
-	'Git',
-	'Github',
-	'Gitlab',
-	'Administración de Sistemas Linux (CLI)',
-	'Figma',
-	'Jira',
-	'Miro',
-	'Notion',
-	'Drive',
-	'Excel',
-	'Word',
-	'Gimp',
-	'Chat GPT',
-	'Midjourney',
-	'Dal·le'
-]
+export const skills = {
+  languages: [
+    { name: 'Castellano - Nativo', gold: false },
+    { name: 'Valenciano - Nativo', gold: false },
+    { name: 'Inglés - Intermedio', gold: false },
+  ],
+	frontend: [
+    { name: 'HTML', gold: true },
+    { name: 'CSS', gold: true },
+    { name: 'Javascript', gold: true },
+    { name: 'Typescript', gold: true },
+    { name: 'React', gold: true },
+    { name: 'Next.js', gold: true },
+    { name: 'React Native', gold: false },
+    { name: 'Tailwind', gold: true },
+    { name: 'Bootstrap', gold: true },
+    { name: 'Angular', gold: false },
+    { name: 'Vue', gold: false },
+    { name: 'Astro', gold: false },
+    { name: 'SEO', gold: false },
+    { name: 'XML', gold: true },
+  ],
+  backend: [
+    { name: 'Node', gold: true },
+    { name: 'Express', gold: true },
+    { name: 'Python', gold: true },
+    { name: 'FastAPI', gold: false },
+    { name: 'PHP', gold: true },
+    { name: 'Symfony', gold: false },
+    { name: 'Java', gold: false },
+    { name: 'SQL', gold: true },
+    { name: 'MongoDB', gold: true },
+    { name: 'Docker', gold: true },
+    { name: 'REST APIs', gold: true },
+    { name: 'OpenAI API', gold: true },
+    { name: 'Third-party integrations', gold: true },
+  ],
+  data_ai_ml: [
+    { name: 'Python', gold: true },
+    { name: 'Scikit-learn', gold: true },
+    { name: 'LangChain', gold: false },
+    { name: 'Splunk', gold: true },
+    { name: 'OpenSearch', gold: false },
+    { name: 'Pytorch', gold: false },
+    { name: 'Tensorflow', gold: false },
+    { name: 'Google Cloud Vertex AI', gold: true },
+    { name: 'Google Cloud BigQuery', gold: true },
+    { name: 'Hadoop', gold: false },
+    { name: 'Spark', gold: false },
+    { name: 'Power BI', gold: false },
+    { name: 'Tableau', gold: false },
+  ],
+  devops_cloud: [
+    { name: 'Docker', gold: true },
+    { name: 'Administración de Sistemas Linux (CLI)', gold: true },
+    { name: 'Git', gold: true },
+    { name: 'Github', gold: true },
+    { name: 'Gitlab', gold: true },
+  ],
+  others: [
+    { name: 'Microsoft 365', gold: true },
+    { name: 'Google Workspace', gold: true },
+    { name: 'Drive', gold: true },
+    { name: 'Notion', gold: false },
+    { name: 'Miro', gold: false },
+    { name: 'Jira', gold: false },
+    { name: 'Figma', gold: false },
+    { name: 'Markdown', gold: true },
+    { name: 'Scrum', gold: true },
+		{ name: 'Chat GPT', gold: false },
+    { name: 'Midjourney', gold: false },
+    { name: 'Gimp', gold: false }
+  ]
+};
+
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -146,19 +175,20 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		<Section title='Experiencia'>
 			<Card
 				heading='Data Analyst & Machine Learning Engineer'
-				subheading='Innovery'
+				subheading='Neverhack'
 				date='Jul 2024 - Actualidad'
-				imagePath='/src/assets/innovery_logo.jpeg'
+				imagePath='/src/assets/neverhack_logo.png'
 				altText='Lorem, ipsum dolor sit'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
-					<li>Desarrollo de modelos de machine learning y análisis de datos con Splunk y ElasticSearch.</li>
-					<li>Implementación de pipelines de datos y creación de dashboards interactivos.</li>
+					<li>Análisis de datos y monitorización de logs con Splunk.</li>
+					<li>Desarrollo de modelos de machine learning con Python y Google Cloud.</li>
+					<li>Desarrollo web Full Stack.</li>
 				</ul>
 			</Card>
 			<Card
-				heading='Web Frontend Developer - React'
+				heading='Web Frontend Developer'
 				subheading='NTT Data - CaixaBank'
 				date='Sep 2022 - Jun 2024 (1 año y 10 meses)'
 				imagePath='/src/assets/nttdata_logo.jpg'
@@ -255,11 +285,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 		</Section> -->
 
 		<Section title='Habilidades'>
-			<SkillLayout title='Idiomas' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='IA y Big Data' skills={IABigData} />
-			<SkillLayout title='Otros' skills={otros} />
+			<SkillLayout title='Idiomas' skills={skills.languages} />
+			<SkillLayout title='Frontend' skills={skills.frontend} />
+			<SkillLayout title='Backend' skills={skills.backend} />
+			<SkillLayout title='IA y Big Data' skills={skills.data_ai_ml} />
+			<SkillLayout title='Devops' skills={skills.devops_cloud} />
+			<SkillLayout title='Otros' skills={skills.others} />
 		</Section>
 	</div>
 	<a
