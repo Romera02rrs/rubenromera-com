@@ -24,7 +24,7 @@ export const skills = {
     { name: 'Node', gold: true },
     { name: 'Express', gold: true },
     { name: 'Python', gold: true },
-    { name: 'FastAPI', gold: false },
+    { name: 'FastAPI', gold: true },
     { name: 'PHP', gold: true },
     { name: 'Symfony', gold: false },
     { name: 'Java', gold: false },
