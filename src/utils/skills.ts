@@ -11,7 +11,7 @@ export const skills = {
     { name: 'Typescript', gold: true },
     { name: 'React', gold: true },
     { name: 'Next.js', gold: true },
-    { name: 'React Native', gold: false },
+    { name: 'React Native', gold: true },
     { name: 'Tailwind', gold: true },
     { name: 'Bootstrap', gold: true },
     { name: 'Angular', gold: false },
