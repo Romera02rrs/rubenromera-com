@@ -52,9 +52,8 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 <meta content={siteConfig.author} name='author' />
 
 {/* SEO */}
-<meta name="keywords" content={siteConfig.keywords}>
-<meta name="robots" content="index, follow">
-
+<meta name='keywords' content={siteConfig.keywords} />
+<meta name='robots' content='index, follow' />
 
 {/* Theme Colour */}
 <meta content='' name='theme-color' />
@@ -94,7 +93,65 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 <meta content={Astro.generator} name='generator' />
 
 {/* Metaetiquetas adicionales */}
-<meta name="language" content="es" />
-<meta name="geo.region" content="ES-A" />
-<meta name="geo.placename" content="Denia" />
-<meta name="geo.position" content="38.83905606783511;0.10872204913167001" />
+<meta name='language' content='es' />
+<meta name='geo.region' content='ES-A' />
+<meta name='geo.placename' content='Denia' />
+<meta name='geo.position' content='38.83905606783511;0.10872204913167001' />
+
+{/* JSON-LD Structured Data for Person Schema */}
+<script type='application/ld+json' is:inline>
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Rubén Romera Sánchez",
+		"givenName": "Ruben",
+		"familyName": "Romera",
+		"alternateName": ["Ruben Romera", "Rubén Romera", "Ruben", "Rubén"],
+		"jobTitle": "Programador Web y Experto en Inteligencia Artificial",
+		"description": "Ruben Romera es un programador web profesional, experto en Inteligencia Artificial y Big Data, especializado en desarrollo Frontend y Backend, Machine Learning y análisis de datos.",
+		"url": "https://rubenromera.com",
+		"image": "https://rubenromera.com/social-card.png",
+		"email": "contacto@rubenromera.com",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Denia",
+			"addressRegion": "Alicante",
+			"addressCountry": "ES"
+		},
+		"knowsAbout": [
+			"Programación Web",
+			"Inteligencia Artificial",
+			"Machine Learning",
+			"Big Data",
+			"React",
+			"Next.js",
+			"Vue.js",
+			"Node.js",
+			"Python",
+			"Análisis de Datos",
+			"Frontend Development",
+			"Backend Development",
+			"Splunk",
+			"Google Cloud"
+		],
+		"sameAs": [
+			"https://github.com/romera02rrs",
+			"https://www.linkedin.com/in/rub%C3%A9n-romera-s%C3%A1nchez-a8798a1b0/"
+		],
+		"alumniOf": [
+			{
+				"@type": "EducationalOrganization",
+				"name": "IES La Mar",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Jávea",
+					"addressCountry": "ES"
+				}
+			}
+		],
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Neverhack"
+		}
+	}
+</script>
