@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
 		}
 	},
 	keywords:
-		'Ruben, Ruben Romera, Rubén, Rubén Romera, Ruben programador, Rubén programador, Ruben desarrollador, Rubén desarrollador, Ruben IA, Rubén IA, Ruben inteligencia artificial, Rubén inteligencia artificial, Ruben web developer, Rubén web developer, Ruben frontend, Rubén frontend, Ruben backend, Rubén backend, Ruben React, Rubén React, Ruben Next.js, Rubén Next.js, Ruben Vue, Rubén Vue, Ruben machine learning, Rubén machine learning, Ruben big data, Rubén big data, Ruben Romera Sanchez, Rubén Romera Sánchez, Ruben portfolio, Rubén portfolio, Ruben CV, Rubén CV, Ruben GitHub, Rubén GitHub, Ruben LinkedIn, Rubén LinkedIn, Ruben Denia, Rubén Denia, Ruben España, Rubén España, rubenromera.com, rubenromera, programador web, desarrollador web, experto en IA'
+		'Ruben, Rubén, Ruben Romera, Rubén Romera, Ruben Romera Sánchez, Rubén Romera Sánchez, Ruben programador, Ruben desarrollador, Ruben IA, Ruben inteligencia artificial, Ruben machine learning, Ruben big data, Ruben web developer, Ruben React, Ruben Next.js, Ruben Vue, Ruben portfolio, Ruben CV, Ruben Denia, programador web, desarrollador web, experto IA, frontend developer, backend developer, analista datos'
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [
