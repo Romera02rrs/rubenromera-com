@@ -5,10 +5,10 @@ export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
 	author: 'Rubén Romera Sánchez',
 	// Meta property used to construct the meta title property, found in src/components/BaseHead.astro L:11
-	title: 'rubenromera.com',
+	title: 'Ruben Romera',
 	// Meta property used as the default description meta property
 	description:
-		'Descubre mi currículum online, donde podrás ver todos mis proyectos, habilidades, aptitudes, conocimientos, estudios y mucho más, también podrás contactar conmigo desde la web, te espero en rubenromera.com',
+		'Ruben Romera Sánchez - Programador web profesional, experto en Inteligencia Artificial y Big Data. Ruben crea soluciones innovadoras con React, Next.js, Vue y tecnologías de IA. Portfolio y proyectos de Ruben.',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'es',
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
 		}
 	},
 	keywords:
-		'rubenromera, ruben romera, Ruben Romera Sanchez, Rubén Romera Sánchez, Rubén Romera CV, Rubén Romera currículum, Rubén Romera portfolio, Rubén Romera portafolio, programador web, desarrollador web, experto en IA, inteligencia artificial, big data, analista de datos, frontend developer, backend developer, desarrollador React, desarrollador Next.js, desarrollador Vue, proyectos IA, Rubén Romera GitHub, Rubén Romera LinkedIn, Rubén Romera X, Rubén Romera Twitter, Rubén Romera Instagram'
+		'Ruben, Rubén, Ruben Romera, Rubén Romera, Ruben Romera Sánchez, Rubén Romera Sánchez, Ruben programador, Ruben desarrollador, Ruben IA, Ruben inteligencia artificial, Ruben machine learning, Ruben big data, Ruben web developer, Ruben React, Ruben Next.js, Ruben Vue, Ruben portfolio, Ruben CV, Ruben Denia, programador web, desarrollador web, experto IA, frontend developer, backend developer, analista datos'
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [
