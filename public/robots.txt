@@ -1,6 +1,8 @@
-# Ruben Romera - rubenromera.com
+# Ruben Romera - Rubén Romera - rubenromera.com
+# Programador Web y Experto en Inteligencia Artificial
 User-agent: *
 Allow: /
+Crawl-delay: 0
 
 # Sitemap
 Sitemap: https://rubenromera.com/sitemap-index.xml
@@ -8,12 +10,20 @@ Sitemap: https://rubenromera.com/sitemap-index.xml
 # Common crawlers
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /
+Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 0
+
+# Block access to admin and private areas (if any)
+Disallow: /admin/
+Disallow: /api/

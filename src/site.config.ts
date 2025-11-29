@@ -8,11 +8,11 @@ export const siteConfig: SiteConfig = {
 	title: 'Ruben Romera',
 	// Meta property used as the default description meta property
 	description:
-		'Ruben Romera Sánchez - Programador web profesional, experto en Inteligencia Artificial y Big Data. Ruben crea soluciones innovadoras con React, Next.js, Vue y tecnologías de IA. Portfolio y proyectos de Ruben.',
+		'Ruben Romera Sánchez - Software Developer y Data Analyst especializado en Machine Learning. Rubén Romera es desarrollador Full Stack con experiencia en React, Next.js, Vue, Python y Big Data. Portfolio profesional de Ruben Romera con proyectos de desarrollo software.',
 	// HTML lang property, found in src/layouts/Base.astro L:18
 	lang: 'es',
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: 'es',
+	ogLocale: 'es_ES',
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
 		locale: 'es',
@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
 		}
 	},
 	keywords:
-		'Ruben, Rubén, Ruben Romera, Rubén Romera, Ruben Romera Sánchez, Rubén Romera Sánchez, Ruben programador, Ruben desarrollador, Ruben IA, Ruben inteligencia artificial, Ruben machine learning, Ruben big data, Ruben web developer, Ruben React, Ruben Next.js, Ruben Vue, Ruben portfolio, Ruben CV, Ruben Denia, programador web, desarrollador web, experto IA, frontend developer, backend developer, analista datos'
+		'Ruben, Rubén, Ruben Romera, Rubén Romera, Ruben Romera Sánchez, Rubén Romera Sánchez, Ruben programador, Rubén programador, Ruben Romera programador, Rubén Romera programador, Ruben desarrollador, Rubén desarrollador, Ruben Romera desarrollador, Rubén Romera desarrollador, Ruben Software Developer, Rubén Software Developer, Ruben machine learning, Rubén machine learning, Ruben big data, Rubén big data, Ruben web developer, Rubén web developer, Ruben React, Rubén React, Ruben Next.js, Rubén Next.js, Ruben Vue, Rubén Vue, Ruben portfolio, Rubén portfolio, Ruben CV, Rubén CV, Ruben Denia, Rubén Denia, Ruben Alicante, Rubén Alicante, Software Developer Denia, desarrollador Denia, frontend developer, backend developer, analista datos, Data Analyst, Machine Learning Engineer, Full Stack Developer'
 }
 
 export const menuLinks: Array<{ title: string; path: string }> = [

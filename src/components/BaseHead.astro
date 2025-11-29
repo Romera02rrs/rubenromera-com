@@ -68,6 +68,8 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 <meta content={socialImageURL} property='og:image' />
 <meta content='1200' property='og:image:width' />
 <meta content='630' property='og:image:height' />
+<meta content='image/png' property='og:image:type' />
+<meta content='Rubén Romera Sánchez - Software Developer' property='og:image:alt' />
 {
 	articleDate && (
 		<>
@@ -78,11 +80,13 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 }
 
 {/* Twitter */}
-<meta content='summary_large_image' property='twitter:card' />
-<meta content={canonicalURL} property='twitter:url' />
-<meta content={title} property='twitter:title' />
-<meta content={description} property='twitter:description' />
-<meta content={socialImageURL} property='twitter:image' />
+<meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:url' content={canonicalURL} />
+<meta name='twitter:title' content={title} />
+<meta name='twitter:description' content={description} />
+<meta name='twitter:image' content={socialImageURL} />
+<meta name='twitter:image:alt' content='Rubén Romera Sánchez - Software Developer' />
+<meta name='twitter:creator' content='@rubenromera' />
 
 {/* Sitemap */}
 <link href='/sitemap-index.xml' rel='sitemap' />
@@ -97,6 +101,15 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 <meta name='geo.region' content='ES-A' />
 <meta name='geo.placename' content='Denia' />
 <meta name='geo.position' content='38.83905606783511;0.10872204913167001' />
+<meta name='revisit-after' content='7 days' />
+<meta name='rating' content='general' />
+<meta name='distribution' content='global' />
+<meta name='coverage' content='worldwide' />
+<meta name='target' content='all' />
+<meta name='audience' content='all' />
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<meta name='format-detection' content='telephone=no' />
 
 {/* JSON-LD Structured Data for Person Schema */}
 <script type='application/ld+json' is:inline>
@@ -104,11 +117,32 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 		"@context": "https://schema.org",
 		"@type": "Person",
 		"name": "Rubén Romera Sánchez",
-		"givenName": "Ruben",
+		"givenName": "Rubén",
+		"additionalName": "Ruben",
 		"familyName": "Romera Sánchez",
-		"alternateName": ["Ruben Romera", "Rubén Romera", "Ruben", "Rubén"],
-		"jobTitle": "Programador Web y Experto en Inteligencia Artificial",
-		"description": "Ruben Romera es un programador web profesional, experto en Inteligencia Artificial y Big Data, especializado en desarrollo Frontend y Backend, Machine Learning y análisis de datos.",
+		"alternateName": [
+			"Ruben Romera",
+			"Rubén Romera",
+			"Ruben Romera Sánchez",
+			"Rubén Romera Sánchez",
+			"Ruben",
+			"Rubén",
+			"Ruben programador",
+			"Rubén programador",
+			"Ruben Romera programador",
+			"Rubén Romera programador",
+			"Ruben desarrollador",
+			"Rubén desarrollador"
+		],
+		"jobTitle": [
+			"Software Developer",
+			"Programador",
+			"Data Analyst",
+			"Machine Learning Engineer",
+			"Full Stack Developer",
+			"Web Developer"
+		],
+		"description": "Rubén Romera Sánchez es un Software Developer profesional especializado en Machine Learning y Big Data. Ruben Romera está especializado en desarrollo Full Stack con React, Next.js, Vue, Python, análisis de datos con Splunk y Google Cloud. Portfolio profesional de Rubén Romera.",
 		"url": "https://rubenromera.com",
 		"image": "https://rubenromera.com/social-card.png",
 		"email": "contacto@rubenromera.com",
@@ -116,6 +150,7 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 			"@type": "PostalAddress",
 			"addressLocality": "Denia",
 			"addressRegion": "Alicante",
+			"postalCode": "03700",
 			"addressCountry": "ES"
 		},
 		"knowsAbout": [
@@ -132,7 +167,10 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 			"Frontend Development",
 			"Backend Development",
 			"Splunk",
-			"Google Cloud"
+			"Google Cloud",
+			"Data Analysis",
+			"Web Development",
+			"Full Stack Development"
 		],
 		"sameAs": [
 			"https://github.com/romera02rrs",
@@ -145,13 +183,33 @@ const socialImageURL = new URL(ogImage ? ogImage : '/social-card.png', Astro.url
 				"address": {
 					"@type": "PostalAddress",
 					"addressLocality": "Jávea",
+					"addressRegion": "Alicante",
+					"addressCountry": "ES"
+				}
+			},
+			{
+				"@type": "EducationalOrganization",
+				"name": "IES Enric Valor",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Pego",
+					"addressRegion": "Alicante",
 					"addressCountry": "ES"
 				}
 			}
 		],
 		"worksFor": {
 			"@type": "Organization",
-			"name": "Neverhack"
+			"name": "Neverhack",
+			"url": "https://neverhack.com"
+		},
+		"hasOccupation": {
+			"@type": "Occupation",
+			"name": "Data Analyst & Machine Learning Engineer",
+			"occupationLocation": {
+				"@type": "City",
+				"name": "Denia"
+			}
 		}
 	}
 </script>

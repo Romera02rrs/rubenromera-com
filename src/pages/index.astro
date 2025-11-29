@@ -12,9 +12,9 @@ import astro from '../assets/about-astro.png'
 
 <PageLayout
 	meta={{
-		title: 'Ruben - Rubén Romera | Programador Web & Experto en IA',
+		title: 'Ruben Romera | Rubén Romera - Software Developer',
 		description:
-			'Ruben Romera Sánchez - Programador web, experto en Inteligencia Artificial y Big Data. Portfolio de Ruben con proyectos de desarrollo web, machine learning y análisis de datos. Descubre el trabajo de Ruben en React, Next.js, Vue y tecnologías de IA.'
+			'Ruben Romera Sánchez - Software Developer e Instructor Técnico especializado en Machine Learning. Rubén Romera es desarrollador Full Stack con experiencia en React, Next.js, Vue, Python y Big Data. Portfolio profesional de Ruben Romera con proyectos de desarrollo software en Denia, Alicante.'
 	}}
 >
 	<div class='flex w-full flex-col gap-y-10'>
@@ -25,7 +25,7 @@ import astro from '../assets/about-astro.png'
 		>
 			<Image
 				src={astro}
-				alt='Ruben Romera - Foto de perfil'
+				alt='Rubén Romera Sánchez - Software Developer - Foto de perfil de Ruben Romera'
 				itemprop='image'
 				class='h-40 w-auto p-2'
 				loading='eager'
@@ -33,12 +33,15 @@ import astro from '../assets/about-astro.png'
 
 			<div class='flex flex-col items-center gap-y-4'>
 				<h1 class='text-center text-3xl font-bold' itemprop='name'>
-					<span itemprop='givenName'>Rubén</span>
+					<span itemprop='givenName'>Rubén</span>{' '}
 					<span itemprop='familyName'>Romera Sánchez</span>
 				</h1>
 				<h2 class='text-center text-lg text-muted-foreground' itemprop='jobTitle'>
-					Programador Web - Experto en IA
+					Software Developer
 				</h2>
+				<p class='sr-only'>
+					Ruben Romera, Rubén Romera, Ruben programador, Rubén programador, Ruben Romera programador, Rubén Romera programador, Ruben desarrollador, Rubén desarrollador, Ruben IA, Rubén IA, Ruben Denia, Rubén Denia
+				</p>
 				<a
 					href='mailto:contacto@rubenromera.com'
 					itemprop='email'
@@ -107,7 +110,7 @@ import astro from '../assets/about-astro.png'
 		<Section title='Presentación' class='flex'>
 			<div class='flex flex-col gap-y-4'>
 				<p class='text-muted-foreground'>
-					¡Hola! 👋, soy <strong>Rubén</strong>, un programador web con experiencia sólida. Formado en Inteligencia
+					¡Hola! 👋, soy <strong>Rubén</strong>, un <strong>Software Developer</strong> con experiencia sólida. Formado en Inteligencia
 					Artificial y en Big Data, disfruto trabajar en equipo, aprender y enseñar. Siempre busco
 					oportunidades para crecer y contribuir al éxito de los proyectos en los que participo.
 
@@ -142,11 +145,11 @@ import astro from '../assets/about-astro.png'
 
 		<Section title='Experiencia'>
 			<Card
-				heading='Data Analyst & Machine Learning Engineer'
+				heading='Software Developer & Technical Instructor'
 				subheading='Neverhack'
 				date='Jul 2024 - Actualidad'
 				imagePath='/src/assets/neverhack_logo.png'
-				altText='Lorem, ipsum dolor sit'
+				altText='Neverhack - Empresa donde trabaja Ruben Romera como Software Developer e Instructor Técnico'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
@@ -167,7 +170,7 @@ import astro from '../assets/about-astro.png'
 				subheading='NTT Data - CaixaBank'
 				date='Sep 2022 - Jun 2024 (1 año y 10 meses)'
 				imagePath='/src/assets/nttdata_logo.jpg'
-				altText='Lorem, ipsum dolor sit'
+				altText='NTT Data - Empresa donde trabajó Ruben Romera como Web Frontend Developer para CaixaBank'
 				imageClass='h-12 w-auto md:-left-16'
 			>
 				<ul class='ml-4 list-disc text-muted-foreground'>
@@ -185,33 +188,6 @@ import astro from '../assets/about-astro.png'
 			</Card>
 		</Section>
 
-		<Section title='Educación'>
-			<Card
-				heading='Master de FP en Inteligencia Artificial y Big Data'
-				subheading='IES La Mar | Jávea'
-				date='Sep 2023 - Jul 2024 (9 meses)'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
-			<Card
-				heading='Desarrollo de Aplicaciones Web'
-				subheading='IES Enric Valor | Pego'
-				date='Sep 2020 - Jul 2022 (1 año y 9 meses)'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
-			<Card
-				heading='Sistemas Microinformáticos y Redes'
-				subheading='IES Historiador Chabas | Denia'
-				date='Sep 2018 - jun 2020 (1 año y 9 meses)'
-				imagePath='/src/assets/about-astro.png'
-				altText='Lorem, ipsum dolor sit'
-				imageClass='h-12 w-auto md:-left-16'
-			/>
-		</Section>
-
 		<Section title='Proyectos'>
 			<div class='grid grid-cols-1 gap-3 md:grid-cols-2'>
 				<ProjectCard
@@ -219,7 +195,7 @@ import astro from '../assets/about-astro.png'
 					heading='Veritas - Descubre tu Verdad'
 					subheading='App móvil Full Stack con React Native + Node + MongoDB, impulsada por IA para el análisis emocional y autoconocimiento.'
 					imagePath='/src/assets/veritas-banner.jpg'
-					altText='Imagen de la app Veritas - Descubre tu Verdad'
+					altText='Proyecto Veritas de Ruben Romera - App móvil Full Stack con IA para análisis emocional'
 					span={2}
 				/>
 				<ProjectCard
@@ -227,28 +203,28 @@ import astro from '../assets/about-astro.png'
 					heading='Tech Talk - Neverhack'
 					subheading='Masterclass dirigida a todos los desarrolladores de la empresa Neverhack.'
 					imagePath='/src/assets/AI-talk-crop.jpg'
-					altText='Imagen de la Tech Talk sobre Inteligencia Artificial'
+					altText='Tech Talk de Ruben Romera sobre Inteligencia Artificial en Neverhack'
 				/>
 				<ProjectCard
 					href='https://aiarosa.vercel.app'
 					heading='AIArosa'
 					subheading='Web construída con Next.js para la venta de soluciones de inteligencia artificial.'
 					imagePath='/src/assets/AIArosa_landing_page.jpg'
-					altText='Imagen de la landing page del proyecto AIArosa'
+					altText='Proyecto AIArosa de Ruben Romera - Landing page con Next.js para soluciones de IA'
 				/>
 				<ProjectCard
 					href='https://rubenromera.com'
 					heading='rubenromera.com'
 					subheading='Web construída con Astro para la creación de un portafolio.'
 					imagePath='/src/assets/Portfolio_landing_page.jpg'
-					altText='Imagen de la landing page del portfolio rubenromera.com'
+					altText='Portfolio web de Ruben Romera - rubenromera.com construido con Astro'
 				/>
 				<ProjectCard
 					href='https://flipperpool.com'
 					heading='Flipperpool'
 					subheading='Web construída con Vue para una empresa de construcción.'
 					imagePath='/src/assets/Flipperpool_landing_page.jpg'
-					altText='Imagen de la landing page de Flipperpool'
+					altText='Proyecto Flipperpool de Ruben Romera - Web construida con Vue para empresa de construcción'
 				/>
 				<!-- <ProjectCard
 					heading='Próximamente...'
@@ -259,6 +235,33 @@ import astro from '../assets/about-astro.png'
 			</div>
 		</Section>
 
+		<Section title='Educación'>
+			<Card
+				heading='Master de FP en Inteligencia Artificial y Big Data'
+				subheading='IES La Mar | Jávea'
+				date='Sep 2023 - Jul 2024 (9 meses)'
+				imagePath='/src/assets/about-astro.png'
+				altText='IES La Mar Jávea - Formación de Ruben Romera en Inteligencia Artificial y Big Data'
+				imageClass='h-12 w-auto md:-left-16'
+			/>
+			<Card
+				heading='Desarrollo de Aplicaciones Web'
+				subheading='IES Enric Valor | Pego'
+				date='Sep 2020 - Jul 2022 (1 año y 9 meses)'
+				imagePath='/src/assets/about-astro.png'
+				altText='IES Enric Valor Pego - Formación de Ruben Romera en Desarrollo de Aplicaciones Web'
+				imageClass='h-12 w-auto md:-left-16'
+			/>
+			<Card
+				heading='Sistemas Microinformáticos y Redes'
+				subheading='IES Historiador Chabas | Denia'
+				date='Sep 2018 - jun 2020 (1 año y 9 meses)'
+				imagePath='/src/assets/about-astro.png'
+				altText='IES Historiador Chabas Denia - Formación de Ruben Romera en Sistemas Microinformáticos y Redes'
+				imageClass='h-12 w-auto md:-left-16'
+			/>
+		</Section>
+
 		<Section title='Certificados'>
 			<Card
 				as='a'
@@ -266,7 +269,7 @@ import astro from '../assets/about-astro.png'
 				subheading=''
 				date='Oct 18 2024'
 				imagePath='/src/assets/google_cloud_logo.png'
-				altText='Prepare Data for ML APIs on Google Cloud Certificate'
+				altText='Certificado de Ruben Romera - Prepare Data for ML APIs on Google Cloud'
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://www.cloudskillsboost.google/public_profiles/2298d318-b525-4469-ab63-ef4f55406230/badges/12183352?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share'
 			/>
@@ -276,7 +279,7 @@ import astro from '../assets/about-astro.png'
 				subheading=''
 				date='Gen 17 2025'
 				imagePath='/src/assets/linkedin_badge_logo.png'
-				altText='GDPR Compliance: Essential Training Certificate'
+				altText='Certificado de Ruben Romera - GDPR Compliance: Essential Training'
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://lnkd.in/dujUvAVC'
 			/>
@@ -286,13 +289,16 @@ import astro from '../assets/about-astro.png'
 				subheading='El certificado tiene otro nombre debido al uso de una cuenta de empresa compartida.'
 				date='Nov 27 2024'
 				imagePath='/src/assets/udemy_logo.png'
-				altText='Prepare Data for ML APIs on Google Cloud Certificate'
+				altText='Certificado de Ruben Romera - Docker para desarrolladores'
 				imageClass='h-11 w-auto md:-left-16'
 				href='https://nttdatalearn.udemy.com/certificate/UC-bfe3e243-e92f-4c75-b5e4-a747c6afa207/'
 			/>
 		</Section>
 
 		<Section title='Habilidades'>
+			<p class='sr-only'>
+				Ruben Romera domina tecnologías de desarrollo software, machine learning, big data, React, Next.js, Vue, Node.js, Python, Splunk y Google Cloud. Rubén Romera es Software Developer especializado en Full Stack.
+			</p>
 			<SkillLayout title='Idiomas' skills={skills.languages} />
 			<SkillLayout title='Frontend' skills={skills.frontend} />
 			<SkillLayout title='Backend' skills={skills.backend} />
