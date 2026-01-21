@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
-import sitemap from '@astrojs/sitemap'
 import { remarkReadingTime } from './src/utils/remarkReadingTime.ts'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import rehypeExternalLinks from 'rehype-external-links'
@@ -19,7 +18,6 @@ export default defineConfig({
 		tailwind({
 			applyBaseStyles: false
 		}),
-		sitemap(),
 		mdx(),
 		icon()
 	],
@@ -41,7 +39,7 @@ export default defineConfig({
 		}
 	},
 	prefetch: true,
-	output: 'server',
+	output: 'hybrid',
 	adapter: vercel({
 		webAnalytics: { enabled: true }
 	})
