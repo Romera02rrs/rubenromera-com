@@ -14,7 +14,7 @@ export const GET = async () => {
 	const blogUrls = posts.map((post) => `/blog/${post.slug}`)
 
 	// Generate URLs for tag pages
-	const tagUrls = Array.from(tags.keys()).map((tag) => `/tags/${tag}`)
+	const tagUrls = tags.map(([tag]) => `/tags/${tag}`)
 
 	// Combine all URLs
 	const allUrls = [...staticPages, ...blogUrls, ...tagUrls]
