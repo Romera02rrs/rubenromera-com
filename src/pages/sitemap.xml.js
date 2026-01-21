@@ -5,9 +5,9 @@ export const prerender = true
 export const GET = async () => {
 	const posts = await getAllPosts()
 	const tags = getUniqueTagsWithCount(posts)
-	const site = 'https://rubenromera.com'
+	const site = import.meta.env.SITE
 
-	// Define static pages
+	// Define static pages - includes home, blog (from menu), tags, and tools
 	const staticPages = ['', '/blog', '/tags', '/tools']
 
 	// Generate URLs for blog posts
