@@ -6,14 +6,14 @@
 	font-family: 'Satoshi';
 	src: url('/fonts/Satoshi-Variable.ttf');
 	font-style: normal;
-	font-display: swap;
+	font-display: optional;
 }
 
 @font-face {
 	font-family: 'Satoshi';
 	src: url('/fonts/Satoshi-VariableItalic.ttf');
 	font-style: italic;
-	font-display: swap;
+	font-display: optional;
 }
 
 @layer base {
